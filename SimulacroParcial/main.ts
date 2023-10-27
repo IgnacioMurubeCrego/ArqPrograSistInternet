@@ -2,10 +2,10 @@ import express from "npm:express@4.18.2";
 import mongoose from "npm:mongoose@7.6.3";
 
 import { getAll } from "./resolvers/getAll.ts";
-import {getInfoById} from "./resolvers/getInfoById.ts";
+// import {getInfoById} from "./resolvers/getInfoById.ts";
 import { postCharacter } from "./resolvers/postCharacter.ts";
-import { updateCharacter } from "./resolvers/updateCharacter.ts";
-import { deleteCharacter } from "./resolvers/deleteCharacter.ts";
+// import { updateCharacter } from "./resolvers/updateCharacter.ts";
+// import { deleteCharacter } from "./resolvers/deleteCharacter.ts";
 
 // IMPORTAR VARIABLES DE ENTORNO DEL ARCHIVO .ENV
 import { load } from "https://deno.land/std@0.204.0/dotenv/mod.ts";
@@ -38,10 +38,10 @@ app.use(express.json());
 // ENDPOINTS
 app
 .get("/api/tierramedia/personajes", getAll)
-.get("/api/tierramedia/personajes/:id", getInfoById)
+// .get("/api/tierramedia/personajes/:id", getInfoById)
 .post("/api/tierramedia/personajes", postCharacter)
-.put("/api/tierramedia/personajes/:id", updateCharacter)
-.delete("/api/tierramedia/personajes/:id", deleteCharacter)
+// .put("/api/tierramedia/personajes/:id", updateCharacter)
+// .delete("/api/tierramedia/personajes/:id", deleteCharacter)
 
 app.listen(PORT);
 console.log("Listening in port 3000.");
