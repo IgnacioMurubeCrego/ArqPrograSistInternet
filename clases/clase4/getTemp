@@ -1,0 +1,3 @@
+// Funcion para devolver la temperatura de una ciudad haciendo pedidos a weather API
+
+export const getTemp = async (place : Place)
